@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #242f46;
+      }
+      div.wrap {
+          border-radius: 50%;
+          overflow: hidden;
+          animation: dancing 1s infinite;
+      }
+      img {
+          animation: rotation 5s infinite linear;
+      }
+      @keyframes rotation {
+          from {
+              transform: rotate(0deg);
+          }
+          to {
+              transform: rotate(360deg);
+          }
+      }
+      @keyframes dancing {
+          0%, 100% {
+              transform: translateY(0);
+          }
+          50% {
+              transform: translateY(-20px);
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <img src="./rac.jpeg">
+</div>
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+<audio loop autoplay>
+  <source src="pedro.mp3" type="audio/mp3">
+</audio>
+</body>
+</html>
